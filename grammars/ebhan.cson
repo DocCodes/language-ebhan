@@ -1,0 +1,138 @@
+'scopeName': 'source.ebhan'
+'name': 'EBHAN'
+'filetypes': [
+   'ebh'
+]
+'patterns': [
+   {
+      'include': '#comment'
+   }
+
+   {
+      'include': '#strings'
+   }
+   {
+      'include': '#string_escapes'
+   }
+   {
+      'include': '#numbers'
+   }
+   {
+      'include': '#operators'
+   }
+   {
+      'include': '#function_calls'
+   }
+   {
+      'include': '#constant_placeholder'
+   }
+
+
+   {
+      'match': '(?<!\\.)\\bDEF(?!\\s*:)\\b'
+      'name': 'storage.type.var.ebhan'
+   }
+   {
+      'match': '(?<!\\.)\\b(IF|THEN|ENDIF)(?!\\s*:)\\b'
+      'name': 'keyword.control.ebhan'
+   }
+]
+'repository':
+   'comment':
+      'patterns': [
+         {
+            'begin': '\\/\\*'
+            'end': '\\*\\/'
+            'name': 'comment.block.ebhan'
+         }
+      ]
+   'numbers':
+      'patterns': [
+         {
+            'match': '''(?x)
+               (?<!\\$)(?:
+                  (?:\\b[0-9]+(\\.)[0-9]+[eE][+-]?[0-9]+\\b)| # 1.1E+3
+                  (?:\\b[0-9]+(\\.)[eE][+-]?[0-9]+\\b)|       # 1.E+3
+                  (?:\\B(\\.)[0-9]+[eE][+-]?[0-9]+\\b)|       # .1E+3
+                  (?:\\b[0-9]+[eE][+-]?[0-9]+\\b)|            # 1E+3
+                  (?:\\b[0-9]+(\\.)[0-9]+\\b)|                # 1.1
+                  (?:\\b[0-9]+(\\.)\\B)|                      # 1.
+                  (?:\\B(\\.)[0-9]+\\b)|                      # .1
+                  (?:\\b[0-9]+\\b(?!\\.))                     # 1
+                  )(?!\\$)
+            '''
+            'captures':
+               '0':
+                  'name': 'constant.numeric.decimal.ebhan'
+               '1':
+                  'name': 'meta.delimiter.decimal.period.ebhan'
+               '2':
+                  'name': 'meta.delimiter.decimal.period.ebhan'
+               '3':
+                  'name': 'meta.delimiter.decimal.period.ebhan'
+               '4':
+                  'name': 'meta.delimiter.decimal.period.ebhan'
+               '5':
+                  'name': 'meta.delimiter.decimal.period.ebhan'
+               '6':
+                  'name': 'meta.delimiter.decimal.period.ebhan'
+         }
+      ]
+   'strings':
+      'patterns': [
+         {
+            'begin': '"'
+            'beginCaptures':
+               '0':
+                  'name': 'punctuation.definition.string.begin.ebhan'
+            'end': '"'
+            'endCaptures':
+               '0':
+                  'name': 'punctuation.definition.string.end.ebhan'
+            'patterns': [
+               {
+                  'include': '#string_escapes'
+               }
+               {
+                  'include': '#constant_placeholder'
+               }
+            ]
+            'name': 'string.quoted.double.ebhan'
+         }
+      ]
+   'constant_placeholder':
+      'patterns': [
+         {
+            'match': '(?<=%){[A-z]+}'
+            'name': 'constant.other.placeholder.ebhan'
+         }
+      ]
+   'string_escapes':
+      'patterns': [
+         {
+            'match': '\\\\(\\|a|b|f|n|r|t|v)'
+            'name': 'constant.character.escape.ebhan'
+         }
+         {
+            'match': '\\\\u(?:[A-Fa-f0-9]{4}|({)([A-Fa-f0-9]+)(}))'
+            'name': 'constant.character.escape.ebhan'
+         }
+    ]
+   'operators':
+      'patterns': [
+         {
+            'match': '===|>=|>|<|<=|!=='
+            'name': 'keyword.operator.comparison.ebhan'
+         }
+         {
+            'match': 'AS'
+            'name': 'keyword.operator.assignment.ebhan'
+         }
+      ]
+   'function_calls':
+      'patterns': [
+         {
+            'match': '(PRINT|INPUT)(?=\\b)'
+            'name': 'entity.name.function.ebhan'
+         }
+      ]

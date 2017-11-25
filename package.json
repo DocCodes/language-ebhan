@@ -1,0 +1,13 @@
+{
+  "name": "language-ebhan",
+  "main": "./lib/language-ebhan",
+  "version": "0.0.1",
+  "description": "The EBHAN language pack for Atom",
+  "keywords": [
+  ],
+  "repository": "https://github.com/atom/language-ebhan",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
