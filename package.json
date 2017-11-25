@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "description": "EBHAN support for Atom",
   "keywords": [
-    "EBHAN"
+    "EBHAN",
+    "language",
+    "grammar"
   ],
   "repository": "https://github.com/DocCodes/language-ebhan",
   "license": "MIT",
