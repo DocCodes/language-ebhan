@@ -1,0 +1,1 @@
+# EBHAN support for Atom
