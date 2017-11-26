@@ -1,6 +1,6 @@
 'scopeName': 'source.ebhan'
 'name': 'EBHAN'
-'filetypes': [
+'fileTypes': [
    'ebh'
 ]
 'patterns': [
@@ -33,7 +33,7 @@
       'name': 'storage.type.var.ebhan'
    }
    {
-      'match': '(?<!\\.)\\b(IF|THEN|ENDIF)(?!\\s*:)\\b'
+      'match': '(?<!\\.)\\b(IF|THEN|ELSE|ENDIF)(?!\\s*:)\\b'
       'name': 'keyword.control.ebhan'
    }
 ]
@@ -121,18 +121,18 @@
    'operators':
       'patterns': [
          {
-            'match': '===|>=|>|<|<=|!=='
+            'match': '(?:\\s)(===|>==|>>>|<<<|<==|!==)(?=\\s)'
             'name': 'keyword.operator.comparison.ebhan'
          }
          {
-            'match': 'AS'
+            'match': '(?:\\b)AS(?=\\b)'
             'name': 'keyword.operator.assignment.ebhan'
          }
       ]
    'function_calls':
       'patterns': [
          {
-            'match': '(PRINT|INPUT)(?=\\b)'
+            'match': '(?:\\b)(PRINT|INPUT|VERBOSE|EXIT)(?=\\b)'
             'name': 'entity.name.function.ebhan'
          }
       ]
