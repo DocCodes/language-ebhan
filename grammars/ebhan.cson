@@ -33,7 +33,7 @@
       'name': 'storage.type.var.ebhan'
    }
    {
-      'match': '(?<!\\.)\\b(IF|THEN|ELSE|ENDIF)(?!\\s*:)\\b'
+      'match': '(?<!\\.)\\b(IF|THEN|ELSE|ELIF|ENDIF)(?!\\s*:)\\b'
       'name': 'keyword.control.ebhan'
    }
 ]
