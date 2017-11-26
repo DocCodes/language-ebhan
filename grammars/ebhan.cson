@@ -45,6 +45,10 @@
             'end': '\\*\\/'
             'name': 'comment.block.ebhan'
          }
+         {
+            'match': '\\#.*'
+            'name': 'comment.line.ebhan'
+         }
       ]
    'numbers':
       'patterns': [
