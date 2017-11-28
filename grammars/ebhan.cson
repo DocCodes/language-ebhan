@@ -7,7 +7,6 @@
    {
       'include': '#comment'
    }
-
    {
       'include': '#strings'
    }
@@ -125,8 +124,12 @@
    'operators':
       'patterns': [
          {
-            'match': '(?:\\s)(===|>==|>>>|<<<|<==|!==)(?=\\s)'
+            'match': '(?:\\s)(===|>=>|<=>|>>>|<<<|!==|[=])(?=\\s)'
             'name': 'keyword.operator.comparison.ebhan'
+         }
+         {
+            'match': '\\+|\\-|\\*|\\*\\*|/|//|%'
+            'name': 'keyword.operator.arithmetic.ebhan'
          }
          {
             'match': '(?:\\b)AS(?=\\b)'
