@@ -1,7 +1,7 @@
 {
   "name": "language-ebhan",
   "main": "./lib/language-ebhan",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "EBHAN support for Atom",
   "keywords": [
     "EBHAN",
