@@ -20,7 +20,7 @@
       'include': '#operators'
    }
    {
-      'include': '#function_calls'
+      'include': '#entities'
    }
    {
       'include': '#constant_placeholder'
@@ -124,7 +124,7 @@
    'operators':
       'patterns': [
          {
-            'match': '(?:\\s)(===|>=>|<=>|>>>|<<<|!==|[=])(?=\\s)'
+            'match': '(?:\\s)(===|>=>|<=>|>>>|<<<|!==|\\[=\\])(?=\\s)'
             'name': 'keyword.operator.comparison.ebhan'
          }
          {
@@ -136,10 +136,20 @@
             'name': 'keyword.operator.assignment.ebhan'
          }
       ]
-   'function_calls':
+   'entities':
       'patterns': [
          {
             'match': '(?:\\b)(PRINT|INPUT|VERBOSE|EXIT)(?=\\b)'
             'name': 'entity.name.function.ebhan'
+         }
+         {
+            'match': '(?:\\b)(STRING)(:)([A-z]*)'
+            'captures':
+               '1':
+                  'name': 'entity.name.class.ebhan'
+               '2':
+                  'name': 'meta.delimiter.method.period.ebhan'
+               '3':
+                  'name': 'entity.name.function.ebhan'
          }
       ]

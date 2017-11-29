@@ -1,0 +1,7 @@
+'.source.ebhan':
+   'editor':
+      'softTabs': true
+      'tabLength': 3
+      'commentStart': '/*'
+      'increaseIndentPattern': '^\\s*(IF|ELIF|ELSE)\\b.*\\s*$'
+      'decreaseIndentPattern': '^\\s*(ELIF|ELSE|ENDIF)\\b.*\\s*$'

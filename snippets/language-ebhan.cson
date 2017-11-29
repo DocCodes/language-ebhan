@@ -1,0 +1,13 @@
+'.source.ebhan':
+   'IF':
+      'prefix': 'IF'
+      'body': 'IF ${1:true} THEN\n\t$2\nENDIF'
+   'IF … ELSE':
+      'prefix': 'IFE'
+      'body': 'IF ${1:true} THEN\n\t$2\nELSE THEN\n\t$3\nENDIF'
+   'ELSE':
+      'prefix': 'ELSE'
+      'body': 'ELSE THEN\n\t$1\n'
+   'ELIF':
+      'prefix': 'ELIF'
+      'body': 'ELIF ${1:true} THEN\n\t$2\n'
