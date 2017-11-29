@@ -1,4 +1,7 @@
 '.source.ebhan':
+   'DEF … AS':
+      'prefix': 'DEF'
+      'body': 'DEF ${1:VAR} AS "${2:VAL}"'
    'IF':
       'prefix': 'IF'
       'body': 'IF ${1:true} THEN\n\t$2\nENDIF'
