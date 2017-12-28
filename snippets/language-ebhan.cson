@@ -17,3 +17,6 @@
    'FOR':
       'prefix': 'FOR'
       'body': 'FOR <${1:0},${2:10}> DO\n\t$3\nENDFOR'
+   'SLEEP':
+      'prefix': 'SLEEP'
+      'body': 'SLEEP ${1:0.5}'
