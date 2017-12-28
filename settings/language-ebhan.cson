@@ -2,6 +2,6 @@
    'editor':
       'softTabs': true
       'tabLength': 3
-      'commentStart': '/*'
-      'increaseIndentPattern': '^\\s*(IF|ELIF|ELSE)\\b.*\\s*$'
-      'decreaseIndentPattern': '^\\s*(ELIF|ELSE|ENDIF)\\b.*\\s*$'
+      'commentStart': '#'
+      'increaseIndentPattern': '^\\s*(IF|ELIF|ELSE|FOR)\\b.*\\s*$'
+      'decreaseIndentPattern': '^\\s*(ELIF|ELSE|ENDIF|ENDFOR)\\b.*\\s*$'
