@@ -3,5 +3,5 @@
       'softTabs': true
       'tabLength': 3
       'commentStart': '#'
-      'increaseIndentPattern': '^\\s*(IF|ELIF|ELSE|FOR)\\b.*\\s*$'
-      'decreaseIndentPattern': '^\\s*(ELIF|ELSE|ENDIF|ENDFOR)\\b.*\\s*$'
+      'increaseIndentPattern': '^\\s*(IF|ELIF|ELSE|FOR|SWITCH|CASE)\\b.*\\s*$'
+      'decreaseIndentPattern': '^\\s*(ELIF|ELSE|ENDIF|ENDFOR|ENDSWITCH|BREAK)\\b.*\\s*$'
