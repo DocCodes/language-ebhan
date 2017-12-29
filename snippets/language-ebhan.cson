@@ -22,4 +22,4 @@
       'body': 'SLEEP ${1:0.5}'
    'SWITCH':
       'prefix': 'SWITCH'
-      'body': 'SWITCH %{${1:VAR}}\n\tCASE ${2:CASE}\n\t$3\n\tBREAK\nENDSWITCH'
+      'body': 'SWITCH %{${1:VAR}}\n\tCASE ${2:(CASE)}\n\t\t$3\n\t\tBREAK\nENDSWITCH'
